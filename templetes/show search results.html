@@ -1,0 +1,63 @@
+<html>
+    <head>
+       <title>search results</title>
+       {% load static %}
+       <link rel="stylesheet" type="text/css" href="{%static 'css/Default.css'%}">
+       <link rel="icon" type="image/x-icon" href="photos/icon.PNG">
+       <p>
+        <a href="all"><input type="button" value="View all students" name="view_active" class="button"></a> 
+        <a href="inactive" target="_blank"><input type="button" value="View inactive students" 
+           name="view_inactive" class="button"></a>
+        <a href="active" target="_blank"><input type="button" value="View active students" 
+           name="view_active" class="button"></a>
+        <a href="search"><input type="button" value="Search for student by name" name="search" class="button"></a>
+        <a href="add"><input type="button" value="Add new student" name="add" class="button"></a>  
+        <a href=""><input type="button" value="Homepage" name="home" class="button"></a>
+     </p> 
+    </head>
+    <body>
+        
+        <br/><br/>  <br/>  
+      
+        <table border="3" width="800" height="40"  style="margin-left:8cm;">
+            <tr>
+                <TH> Student Name </TH> 
+                <TH> ID </TH> 
+                <TH> Level </TH>
+                <TH> Department </TH> 
+                <TH> GPA </TH> 
+                <th>Status </th>
+                <TH> Gender </TH>   
+                <TH> Email </TH> 
+                <TH> Date Of Birth </TH>   
+                <TH> Mobile Number </TH> 
+                <th>Update</th>
+                <th>assign department</th>
+            </tr>
+            {%for s in searchedstu%}
+            <tr>
+                <TH> {{s.name}} </TH> 
+                <TH> {{s.id}} </TH> 
+                <TH> {{s.level}} </TH>    
+                <TH> {{s.department}}</TH>  
+                <TH> {{s.GPA}} </TH> 
+                <TH> {{s.status}} </TH> 
+                <TH> {{s.gender}} </TH> 
+                <TH> {{s.Email}}</TH> 
+                <TH> {{s.Date_of_birth}}</TH> 
+                <TH>{{s.phoneNumber}} </TH> 
+                <TH><a href="update"><input type="button" name="update" value="update" class="button2" onclick ="update()"></TH>
+                <TH><a href="department"><input type="button" name="assign department" value="assign student department"class="button2" ></a></TH>
+                </tr>
+                {% endfor %}
+        </table> <br/> <br/>
+        <script src="{%static 'js/script.js'%}"></script>
+      <center> 
+                
+    
+     </center> 
+
+              
+            
+    </body>
+</html>

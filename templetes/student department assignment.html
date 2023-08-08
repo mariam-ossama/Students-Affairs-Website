@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>department assignment</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{%static 'css/Default.css'%}">
+        <link rel="icon" type="image/x-icon" href="photos/icon.PNG">
+        <p>
+          <a href="all"><input type="button" value="View all students" name="view_active" class="button"></a> 
+          <a href="inactive" target="_blank"><input type="button" value="View inactive students" 
+             name="view_inactive" class="button"></a>
+          <a href="active" target="_blank"><input type="button" value="View active students" 
+             name="view_active" class="button"></a>
+          <a href="search"><input type="button" value="Search for student by name" name="search" class="button"></a>
+          <a href="add"><input type="button" value="Add new student" name="add" class="button"></a>  
+          <a href=""><input type="button" value="Homepage" name="home" class="button"></a>
+       </p> 
+    </head>
+
+    <body>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <form  style="margin-left: 14cm;" name="d_form" >
+        <b>Student name:</b> <br/><br/>
+        <b>Student ID:</b> <br/><br/>
+      <b>select a department</b> 
+      <select name="department">
+        <option value="select department">select department</option>
+          <option value="General">General</option>
+          <option value="AI">AI</option>
+          <option value="CS">CS</option>
+          <option value="IT">IT</option>
+          <option value="IS">IS</option>
+          <option value="DS">DS</option>
+          </select>
+      <br><br>
+      <button type="submit"  class="button2" onclick="validate_department_assignment()">submit</button>
+    </form>
+   
+    </body>
+    <script src="{%static 'js/other validationds.js'%}"></script>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+         <link rel="stylesheet" type="text/css" href="{%static 'css/Default.css'%}">
+         <link rel="icon" type="image/x-icon" href="photos/icon.PNG">
+         <p>
+            <a href="all"><input type="button" value="View all students" name="view_active" class="button"></a> 
+            <a href="inactive" target="_blank"><input type="button" value="View inactive students" 
+               name="view_inactive" class="button"></a>
+            <a href="active" target="_blank"><input type="button" value="View active students" 
+               name="view_active" class="button"></a>
+            <a href="search"><input type="button" value="Search for student by name" name="search" class="button"></a>
+            <a href="add"><input type="button" value="Add new student" name="add" class="button"></a>  
+            <a href=""><input type="button" value="Homepage" name="home" class="button"></a>
+         </p>  <br/><br/><br/>
+    
+    <title>Add new student</title>
+
+</head>
+
+<body>
+    <div  id="a_div">
+        <form style="margin-left: 4cm;" name="a_form" onsubmit="validate_form()" action ="" method = "POST">
+            {% csrf_token %}
+
+            <h2 style="margin-left: 2cm;">
+                <u>Add new student</u>
+            </h2>
+
+            <h3 style="margin-left: 3cm;">Fill the info</h3>
+
+            <label style="margin-right: 70px;">NAME :</label>
+            <input type="text" class="wid5" placeholder="Enter full Name" name="name" id="name">
+            <br><br>
+
+            <label style="margin-right: 100px;"> ID :</label>
+            <input type="number"  class="wid5" placeholder="Enter ID" name="id" id="id">
+            <br><br>
+
+            <label style="margin-right:70px;"> LEVEL :</label>
+            <select id="level"  name="level">
+                <option value="select level"> select level </option>
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+            </select>
+            <br><br>
+
+
+            <label style="margin-right: 15px;"> DEPARTMENT :</label>
+
+            <select  name="department">
+                <option value="select department">select department</option>
+                <option value="General"> General </option>
+                <option value="AI">AI </option>
+                <option value="CS">CS </option>
+                <option value="IT"> IT </option>
+                <option value="IS">IS </option>
+                <option value="DS">DS </option>
+            </select>
+            <br><br>
+
+
+            <label style="margin-right: 90px;"> GPA : </label>
+            <input type="number" step="0.01" min="0" max="4" class="wid5" placeholder="Min is: 0  Max is: 4" name="gpa">
+            <br><br>
+
+            <label style="margin-right: 60px;"> STATUS :</label>
+            <input id="active" type="radio" name="status" value="active">
+            <label for="active">active</label>
+            <input id="inactive" type="radio" name="status" value="inactive">
+            <label for="inactive">in active</label>
+            <br><br>
+
+
+            <label style="margin-right: 55px;"> GENDER :</label>
+            <input id="female" type="radio" name="gender" value="female">
+            <label for="female">female</label>
+            <input id="male" type="radio" name="gender" value="male">
+            <label for="male">male</label>
+            <br><br>
+
+            <label style="margin-right: 80px;"> EMAIl :</label>
+            <input type="email" class="wid5" placeholder=" Email e.g abc@fgh.com" name="email">
+            <br><br>
+
+            <label style="margin-right: 9px;"> DATE OF BIRTH :</label>
+            <input type="date" class="wid5" name="dateOfBirth" id="DOB" >
+            <br><br>
+
+            <label> PHONE NUMBER :</label>  
+            <input type="tel" pattern="[0]{1}[1]{1}[0,1,2,5]{1}[0-9]{7,8}"
+            placeholder="e.g 010 / 011 / 012 / 015...." class="wid5" name="phoneNumber" >
+            <br>
+            <small style="margin-left: 10px;"> * the phone must be 10 or 11 digit begin with
+                01 then 0,1,2 or 5 *</small>
+            <br><br>
+
+            <input type="submit" value="save" class="button2" style="margin-left: 4cm;" id="submit">
+        </form>
+
+    </div>
+    
+    <script src="{%static 'js/form validation.js'%}"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Homepage</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{%static 'css/Default.css'%}">
+        <link rel="icon" type="image/x-icon" href="static/photos/icon.PNG">
+         <p>
+             <a href="all"><input type="button" value="View all students" name="view_active" class="button"></a> 
+             <a href="inactive" target="_blank"><input type="button" value="View inactive students" 
+                name="view_inactive" class="button"></a>
+             <a href="active" target="_blank"><input type="button" value="View active students" 
+                name="view_active" class="button"></a>
+             <a href="search"><input type="button" value="Search for student by name" name="search" class="button"></a>
+             <a href="add"><input type="button" value="Add new student" name="add" class="button"></a>  
+             <a href=""><input type="button" value="Homepage" name="home" class="button"></a>
+          </p> 
+        </head>
+      
+     <body>  
+        {%block content%}  
+         <br/> <br/> <br/>
+        <h1>This is home page </h1>  <br/> 
+        {%endblock%} 
+    </body>
+
+             
+</html>    

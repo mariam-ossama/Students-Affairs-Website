@@ -1,0 +1,78 @@
+.button
+{
+    padding: 14px 10px;  
+    border: none;                   
+    float:right;
+    cursor: pointer;
+    background-color:lightgray ;        /*#976e22 rgb(160, 103, 37) */
+    color:   #00ace6 ;
+    font-weight: bold;
+    font-size: 14;
+    width: 16.66%;
+}
+.button:hover
+{
+    padding: 14px 10px;                          
+    float:right;
+    border-style:double;
+    border-color:lightgray ;
+    background-color: #00ace6;
+    color: lightgray;
+
+}
+
+body
+{ 
+   background-repeat: no-repeat;
+   background-size:cover;
+   background-attachment: fixed;
+   background-image: url(photos/Background.webp)
+}
+
+.button2 {
+    background-color: #87c2d5;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    padding: 7px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 0.5cm;
+    margin-bottom: 1cm;
+    cursor: pointer;
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button2:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #666;
+}
+
+
+select {
+    border: 1px solid;
+    width: 5cm;
+}
+#a_div{
+    height: 600px;
+    width: 600px;
+    background-color: lightgrey;  /* rgb(233, 249, 249)*/
+    margin-left: 10cm;
+    margin-right: 7cm;
+    border:  2px solid;
+}
+.wid5 {
+    width: 5cm;
+    border: 1px solid;
+}
+
+.fff{
+
+    margin-right: 100%;
+    margin-bottom: 5px;
+
+
+}
